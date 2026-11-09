@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="StreamFetch — download supported public videos you have permission to save.">
+  <title>StreamFetch — Video Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark"><span></span><span></span><span></span></span><span>stream<span class="brand-accent">fetch</span></span></a>
+    <div class="top-note"><span class="status-dot"></span> Simple. Fast. Private.</div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MEDIA, YOUR WAY</div>
+      <h1>Save the videos<br>that <span>move you.</span></h1>
+      <p class="subhead">Paste a link. Choose your format. Keep a copy of content you're allowed to download.</p>
+      <div class="download-panel">
+        <label class="input-label" for="videoUrl">VIDEO URL</label>
+        <div class="url-row">
+          <div class="link-icon">↗</div>
+          <input id="videoUrl" type="url" placeholder="Paste your video link here..." autocomplete="url">
+          <button id="fetchBtn" class="fetch-btn"><span>Fetch video</span><b>→</b></button>
+        </div>
+        <div class="supported"><span>SUPPORTED SOURCES</span><div class="platforms"><i>YT</i><i>TK</i><i>IG</i><i>f</i></div><span class="secure">⌑ No account needed</span></div>
+      </div>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <section id="result" class="result-card" hidden>
+        <div class="preview"><img id="thumb" alt="Video thumbnail"><div class="play">▶</div></div>
+        <div class="video-details">
+          <div class="ready-tag"><span></span> VIDEO READY</div>
+          <h2 id="videoTitle">Video title</h2>
+          <p id="videoMeta"></p>
+          <div class="controls">
+            <label for="quality">QUALITY / FORMAT</label>
+            <select id="quality">
+              <option value="best">Best available</option>
+              <option value="1080">Up to 1080p</option>
+              <option value="720">Up to 720p</option>
+              <option value="480">Up to 480p</option>
+              <option value="audio">Audio only (MP3)</option>
+            </select>
+            <button id="downloadBtn" class="download-btn">Download file <span>↓</span></button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="steps">
+      <div class="section-kicker">THREE SIMPLE STEPS</div>
+      <div class="step-grid">
+        <article><div class="step-num">01</div><div class="step-icon">⌁</div><h3>Copy the link</h3><p>Copy the URL of a publicly accessible video from a supported source.</p></article>
+        <article><div class="step-num">02</div><div class="step-icon">◈</div><h3>Choose your quality</h3><p>Preview the video and select an available format or resolution.</p></article>
+        <article><div class="step-num">03</div><div class="step-icon">↓</div><h3>Save your file</h3><p>Download the media directly to your device. No account required.</p></article>
+      </div>
+    </section>
+    <section class="notice"><span>ⓘ</span><p><strong>Use responsibly.</strong> Only download videos you own, have permission to save, or are otherwise legally entitled to download. Respect creator rights and each platform's terms. Private, DRM-protected and restricted content is not supported.</p></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark"><span></span><span></span><span></span></span><span>stream<span class="brand-accent">fetch</span></span></a><span>Made for mindful downloading.</span><span>© <span id="year"></span> StreamFetch</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
